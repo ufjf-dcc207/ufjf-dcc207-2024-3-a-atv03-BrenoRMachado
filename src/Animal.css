@@ -1,6 +1,7 @@
 .animal {
-    border: lpx solid grey;
-    box-shadow: 0.lem 0.lem 0.2em;
+    border: 1px solid grey;
+    box-shadow: 0.1em 0.1em 0.2em;
     padding: 0.5em;
-    border: 0.5em;
+    border-radius: 0.5em;
+    
 }
