@@ -30,6 +30,7 @@
         color: white;
         min-height: 1em;
         grid-area: extincao;
+        padding: 0.2em;
 
     }
 }
