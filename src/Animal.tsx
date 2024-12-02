@@ -11,7 +11,7 @@ export default function({icone, nome, peso , extincao} : AnimalProps) {
     return <div className="animal">
         <div>{icone}</div>
         <div>{nome}</div>
-        <div>{peso}</div>
+        <div>{peso.toLocaleString()}kg</div>
         <div>{extincao}</div>
     </div>
 }
