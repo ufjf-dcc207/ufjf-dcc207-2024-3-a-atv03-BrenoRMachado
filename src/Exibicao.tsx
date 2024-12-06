@@ -5,7 +5,6 @@ interface ExibicaoProps {
     abertura: Date;
     fechamento: Date;
     cercado: string;
-    animais: ReactNode;
     children?: ReactNode;
 }
 export default function Exibicao({
