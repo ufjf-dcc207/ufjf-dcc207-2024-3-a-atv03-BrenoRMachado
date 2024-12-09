@@ -1,8 +1,18 @@
 import "./App.css";
 import Animal from "./Animal";
 import Exibicao from "./Exibicao";
+import { ReactNode } from "react";
 
 function App() {
+  const exA1: ReactNode[] = [
+    <Animal icone="🦁" nome="Leão" peso={-1} extincao />,
+    <Animal icone="🦒" nome="Girafa" peso={1200} extincao />,
+  ];
+  const exB2: ReactNode[] = [
+    <Animal icone="🦜" nome="Paraguaio" peso={0.12} />,
+    <Animal icone="🐖" nome = "Porco" peso={360} extincao />,
+
+  ];
   return (
     <div className="app">
       <Exibicao
@@ -10,8 +20,7 @@ function App() {
         fechamento={new Date("2024-12-06T12:00-03:00")}
         cercado="A1"
       >
-        <Animal icone="🦁" nome="Leão" peso={-1} extincao />
-        <Animal icone="🦒" nome="Girafa" peso={1200} extincao />
+        {exA1}
       </Exibicao>
 
       <Exibicao
@@ -19,7 +28,7 @@ function App() {
         fechamento={new Date("2024-12-06T17:00-03:00")}
         cercado="B1"
       >
-        <Animal icone="🦜" nome="Paraguaio" peso={0.12} />
+        {exB2}
       </Exibicao>
     </div>
   );
