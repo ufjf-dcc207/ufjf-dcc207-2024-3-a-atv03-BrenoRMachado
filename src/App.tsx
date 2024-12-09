@@ -12,15 +12,9 @@ const ANIMAIS: AnimaisTupleType[] = [
 ];
 
 function App() {
-  const exA1: ReactNode[] = [];
-  const exB2: ReactNode[] = ANIMAIS.map( animal => <Animal 
-    key={animal[1]}
-    icone={animal[0]} 
-    nome={animal[1]} 
-    peso={animal[2]} 
-    extincao={animal[3]} 
-  />
-  );
+  const exA1: AnimaisTupleType[] = ANIMAIS.filter(animal => animal[2]<200);
+  const exB2: AnimaisTupleType[] = ANIMAIS.filter(animal => animal[2]>=200);
+  
 
   return (
     <div className="app">
@@ -29,7 +23,15 @@ function App() {
         fechamento={new Date("2024-12-06T12:00-03:00")}
         cercado="A1"
       >
-        {exA1}
+        {exA1.map( (animal) => ( 
+            <Animal 
+                key={animal[1]}
+                icone={animal[0]} 
+                nome={animal[1]} 
+                peso={animal[2]} 
+                extincao={animal[3]} 
+            />
+        ))}
       </Exibicao>
 
       <Exibicao
@@ -37,7 +39,15 @@ function App() {
         fechamento={new Date("2024-12-06T17:00-03:00")}
         cercado="B1"
       >
-        {exB2}
+        {exB2.map( (animal) => ( 
+            <Animal 
+                key={animal[1]}
+                icone={animal[0]} 
+                nome={animal[1]} 
+                peso={animal[2]} 
+                extincao={animal[3]} 
+            />
+        ))}
       </Exibicao>
     </div>
   );
