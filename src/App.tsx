@@ -16,7 +16,8 @@ function App() {
   const exB2: ReactNode[] = [];
   for(let i = 0 ; i< ANIMAIS.length; i++)
   {
-    exA1.push(
+    const ex = ANIMAIS[i][2]<200.0? exA1 : exB2;
+    ex.push(
       <Animal 
       key={ANIMAIS[i][1]}
       icone={ANIMAIS[i][0]} 
